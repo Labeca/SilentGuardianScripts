@@ -12,7 +12,7 @@ function Start () {
 }
 
 function Update () {
- var controller:CharacterController  = GetComponent.<CharacterController>(); 
+	var controller:CharacterController  = GetComponent.<CharacterController>(); 
 	
 	if(controller.isGrounded){
 		moveDirection = Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -24,10 +24,8 @@ function Update () {
 		
 	// Move the controller
 	controller.Move(moveDirection * Time.deltaTime);
-
 }
 
-function fixedUpdate(){
-
-
+function FixedUpdate(){
+	 
 }
